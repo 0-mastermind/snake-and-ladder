@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake and Ladder Game</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button class="sound-toggle" id="soundToggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+      </svg>
+    </button>
+    <button class="theme-toggle" id="themeToggle"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-sun-icon lucide-sun">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2" />
+        <path d="M12 20v2" />
+        <path d="m4.93 4.93 1.41 1.41" />
+        <path d="m17.66 17.66 1.41 1.41" />
+        <path d="M2 12h2" />
+        <path d="M20 12h2" />
+        <path d="m6.34 17.66-1.41 1.41" />
+        <path d="m19.07 4.93-1.41 1.41" /></svg
+    ></button>
+    <div class="container">
+      <h1>Snake and Ladder</h1>
+
+      <!-- Player Selection Screen -->
+      <div class="player-selection" id="playerSelection">
+        <h2>Select Number of Players</h2>
+        <div class="player-buttons">
+          <button class="player-button" onclick="startGame(2)"
+            >2 Players</button
+          >
+          <button class="player-button" onclick="startGame(3)"
+            >3 Players</button
+          >
+          <button class="player-button" onclick="startGame(4)"
+            >4 Players</button
+          >
+          <button class="player-button" onclick="startGame(5)"
+            >5 Players</button
+          >
+        </div>
+      </div>
+
+      <!-- Game Screen -->
+      <div class="game-container hidden" id="gameContainer">
+        <div class="game-board" id="board"></div>
+        <div class="game-controls">
+          <div class="players-info" id="playersInfo">
+            <!-- Player info will be dynamically added here -->
+          </div>
+          <div class="turn-info">
+            <h2>Player's Turn</h2>
+            <p id="currentPlayer">Player 1</p>
+          </div>
+          <div class="dice" id="dice" data-value="1">
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+            <div class="dice-dot"></div>
+          </div>
+          <button class="play-again" id="resetButton">Play Again</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
